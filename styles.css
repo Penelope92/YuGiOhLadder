@@ -35,12 +35,11 @@ form {
 
 .form-group {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-around;
 }
 
 form textarea {
-    width: 70%;
+    width: 60%;
     padding: 10px;
     margin: 10px 0;
     border: none;
@@ -49,11 +48,12 @@ form textarea {
 }
 
 .date-selector {
-    width: 25%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 10px 0;
+    justify-content: space-around;
 }
 
 form input[type="date"] {
@@ -107,3 +107,5 @@ table tr:nth-child(even) {
 table tr:nth-child(odd) {
     background-color: #3e3e3e;
 }
+
+

@@ -26,7 +26,8 @@ function parseData() {
             return null;
         }
         const wins = parseInt(parts[2], 10);
-        const points = Math.floor(wins / 3) + 1;
+        const checkbox = document.getElementById('specialEventCheckbox'); // Replace 'yourCheckboxId' with the actual ID of your checkbox
+        const points = checkbox.checked ? 2 * (Math.floor(wins / 3) + 1) : Math.floor(wins / 3) + 1;
         return { id: idMatch[1], name: fullName, points: points };
     }).filter(entry => entry !== null);
 }
@@ -202,3 +203,4 @@ function showSuccess(message) {
     document.getElementById('successMessage').textContent = message;
 }
 
+let specialEvent = false;

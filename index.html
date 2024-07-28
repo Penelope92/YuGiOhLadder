@@ -14,30 +14,33 @@
     <form>
         <div class="form-group">
             <textarea id="dataInput" rows="10" cols="50" placeholder="Paste data here..."></textarea>
+            
             <div class="date-selector">
                 <label for="dateInput">Select Date:</label>
                 <input type="date" id="dateInput">
+                <label for="specialEventCheckbox">Special Event</label>
+                <input type="checkbox" id="specialEventCheckbox" name="specialEventCheckbox">
             </div>
         </div>
         <button type="button" onclick="addData()">Add Data</button>
         <button type="button" onclick="saveAsCSV()">Save as CSV</button>
         <button type="button" onclick="loadFromCSV()">Load from CSV</button>
         <input type="file" id="fileInput" style="display:none" accept=".csv" onchange="handleFile(event)">
-    </form>
-    <div id="error"></div>
-    <div id="successMessage"></div>
-    <div id="fileName"></div> <!-- New element to display the file name -->
-    <table id="dataTable">
-        <thead>
-            <tr>
-                <th>Player ID</th>
-                <th>Player Name</th>
-                <th>Total Points</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <script src="scripts.js"></script>
-</body>
-</html>
+        </form>
+        <div id="error"></div>
+        <div id="successMessage"></div>
+        <div id="fileName"></div> <!-- New element to display the file name -->
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Player ID</th>
+                    <th>Player Name</th>
+                    <th>Total Points</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script src="scripts.js"></script>
+        </body>
+        </html>
