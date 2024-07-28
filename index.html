@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
-        <img src="./logo.png" alt="logo" class="logo">
         <img src="images/logo.png" alt="logo" class="logo">
         <h1>Yu-Gi-Oh! TCG Ladder Calculator</h1>
     </header>
@@ -27,25 +26,6 @@
         <button type="button" onclick="saveAsCSV()">Save as CSV</button>
         <button type="button" onclick="loadFromCSV()">Load from CSV</button>
         <input type="file" id="fileInput" style="display:none" accept=".csv" onchange="handleFile(event)">
-    </form>
-    <div id="error"></div>
-    <div id="successMessage"></div>
-    <div id="fileName"></div> <!-- New element to display the file name -->
-    <table id="dataTable">
-        <thead>
-            <tr>
-                <th>Player ID</th>
-                <th>Player Name</th>
-                <th>Total Points</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <script src="scripts.js"></script>
-</body>
-</html>
-
         </form>
         <div id="error"></div>
         <div id="successMessage"></div>
