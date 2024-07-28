@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh! TCG Ladder Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Yu-Gi-Oh! Logo" class="logo">
+        <h1>Yu-Gi-Oh! TCG Ladder Calculator</h1>
+    </header>
+    <form>
+        <div class="form-group">
+            <textarea id="dataInput" rows="10" cols="50" placeholder="Paste data here..."></textarea>
+            <div class="date-selector">
+                <label for="dateInput">Select Date:</label>
+                <input type="date" id="dateInput">
+            </div>
+        </div>
+        <button type="button" onclick="addData()">Add Data</button>
+        <button type="button" onclick="saveAsCSV()">Save as CSV</button>
+        <button type="button" onclick="loadFromCSV()">Load from CSV</button>
+        <input type="file" id="fileInput" style="display:none" accept=".csv" onchange="handleFile(event)">
+    </form>
+    <div id="error"></div>
+    <div id="successMessage"></div>
+    <div id="fileName"></div> <!-- New element to display the file name -->
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Player ID</th>
+                <th>Player Name</th>
+                <th>Total Points</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="scripts.js"></script>
+</body>
+</html>
